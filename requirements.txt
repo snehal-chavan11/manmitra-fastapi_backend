@@ -9,7 +9,7 @@ python-multipart==0.0.6
 python-jose[cryptography]==3.5.0
 motor==3.7.1
 reportlab==4.3.1
-pandas==2.2.2
+pandas==2.1.1
 matplotlib==3.9.0
 numpy==2.2.6
 pymongo==4.14.1
