@@ -28,7 +28,8 @@ app.add_middleware(
         "http://localhost:3000",  # User frontend
         "http://localhost:3001",  # Admin frontend
         "http://localhost:3002",  # Portal
-        "http://localhost:3003",  # Volunteer frontend
+        "http://localhost:3003", 
+         os.environ.get("FRONTEND_URL", ""), # Volunteer frontend
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -92,10 +93,13 @@ async def global_exception_handler(request, exc):
     )
 
 if __name__ == "__main__":
+    import os
+
     uvicorn.run(
-        "main:app",
+        "app.main:app",  # note the path
         host="0.0.0.0",
-        port=8000,
+        port=int(os.environ.get("PORT", 8000)),  # use Render's port if available
         reload=settings.ENVIRONMENT == "development",
         log_level="info"
     )
+
