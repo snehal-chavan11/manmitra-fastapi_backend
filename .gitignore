@@ -1,0 +1,57 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# --- Virtual Environment ---
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+
+# --- IDE / Editor Files ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- OS Files ---
+.DS_Store
+Thumbs.db
+
+# --- Logs & Temp Files ---
+*.log
+*.pot
+*.pyc
+*.pkl
+*.tmp
+*.swp
+*.bak
+
+# --- Environment Variables ---
+.env
+.env.local
+.env.*
+!.env.example
+
+# --- Dependency Caches ---
+pip-wheel-metadata/
+__pypackages__/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# --- Coverage / Test ---
+htmlcov/
+.tox/
+.nox/
+.coverage
+.pytest_cache/
+.mypy_cache/
+
+# --- Jupyter Notebook Checkpoints ---
+.ipynb_checkpoints/
